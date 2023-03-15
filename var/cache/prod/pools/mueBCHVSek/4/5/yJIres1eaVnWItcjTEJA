@@ -1,0 +1,3 @@
+1678701899
+%255B960d2533dea1524c601f1b95f73fd907d82c58cb%255D%255B1%255D
+a:1:{s:471:"query=SELECT DISTINCT d0_.id AS id_0, MIN(d1_.price02) AS sclr_1, d0_.id AS id_2 FROM dtb_product d0_ INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d1_.visible = 1) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_1 ASC, d0_.id DESC LIMIT 20&params=a:0:{}&types=a:0:{}&connectionParams=7fe1a609418cda7e2df4ce95056389d6bb50d67de91f7969f26a764c38cb3444";a:2:{i:0;a:3:{s:4:"id_0";s:1:"2";s:6:"sclr_1";s:7:"2800.00";s:4:"id_2";s:1:"2";}i:1;a:3:{s:4:"id_0";s:1:"1";s:6:"sclr_1";s:7:"5000.00";s:4:"id_2";s:1:"1";}}}

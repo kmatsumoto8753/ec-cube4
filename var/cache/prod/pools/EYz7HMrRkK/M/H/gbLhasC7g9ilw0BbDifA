@@ -1,0 +1,51 @@
+<?php //Eccube.Entity.Customer
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        (\Symfony\Component\VarExporter\Internal\Registry::$factories['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'Eccube\\Entity\\Customer',
+            ],
+            'defaultGroup' => [
+                'Customer',
+            ],
+            'constraints' => [
+                [
+                    $o[1],
+                ],
+            ],
+            'constraintsByGroup' => [
+                [
+                    'Default' => [
+                        $o[1],
+                    ],
+                    'Customer' => [
+                        $o[1],
+                    ],
+                ],
+            ],
+            'message' => [
+                1 => 'form_error.customer_already_exists',
+            ],
+            'repositoryMethod' => [
+                1 => 'getNonWithdrawingCustomers',
+            ],
+            'fields' => [
+                1 => 'email',
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                    'Customer',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
