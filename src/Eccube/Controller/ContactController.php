@@ -111,7 +111,7 @@ class ContactController extends AbstractController
                     );
                     $this->eventDispatcher->dispatch(EccubeEvents::FRONT_CONTACT_INDEX_COMPLETE, $event);
 
-                    $data = $event->getArgument('data');
+                    $data = $event->getArgument('data-dummy');
 
                     // メール送信
                     $this->mailService->sendContactMail($dat);
