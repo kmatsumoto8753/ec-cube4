@@ -23,12 +23,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-try {
-    //Add your code that may throw an error here.
-} catch (UserNotFoundException $e) {
-        newrelic_notice_error($e);
-        //Handle normally.
-}
 
 class ContactController extends AbstractController
 {
