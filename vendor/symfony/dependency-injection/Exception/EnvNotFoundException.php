@@ -18,5 +18,4 @@ namespace Symfony\Component\DependencyInjection\Exception;
  */
 class EnvNotFoundException extends InvalidArgumentException
 {
-    newrelic_notice_error($e)
 }
