@@ -105,6 +105,7 @@ class EnvVarProcessor implements EnvVarProcessorInterface
                 }
             } catch (EnvNotFoundException $e) {
                 // no-op
+                newrelic_notice_error($e)
             }
 
             return '' === $default ? null : $this->container->getParameter($default);
