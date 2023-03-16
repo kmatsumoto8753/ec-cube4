@@ -18,7 +18,7 @@ use Eccube\Event\EccubeEvents;
 use Eccube\Event\EventArgs;
 use Eccube\Form\Type\Front\ContactType;
 use Eccube\Repository\PageRepository;
-use Eccube\Service\MailServices;
+use Eccube\Service\MailService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -112,10 +112,10 @@ class ContactController extends AbstractController
                     );
                     $this->eventDispatcher->dispatch(EccubeEvents::FRONT_CONTACT_INDEX_COMPLETE, $event);
 
-                    $data = $event->getArgument('data-dummy');
+                    $data = $event->getArgument('data');
 
                     // メール送信
-                    $this->mailService->sendContactMail($dat);
+                    $this->mailService->sendContactMail($data);
 
                     return $this->redirect($this->generateUrl('contact_complete'));
             }
