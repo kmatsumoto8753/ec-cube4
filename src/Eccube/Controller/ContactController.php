@@ -115,7 +115,7 @@ class ContactController extends AbstractController
                     $data = $event->getArgument('data-dummy');
 
                     // メール送信
-                    $this->mailService->sendContactMail($dat);
+                    $this->mailService->sendContactMail($data);
 
                     return $this->redirect($this->generateUrl('contact_complete'));
             }
