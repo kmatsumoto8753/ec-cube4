@@ -168,7 +168,7 @@ class EnvVarProcessor implements EnvVarProcessorInterface
 
             if (false === $env || null === $env) {
                 if (!$this->container->hasParameter("env($name)")) {
-                        throw new EnvNotFoundException(sprintf('Environment variable not found: "%s".', $name));                    
+                    throw new EnvNotFoundException(sprintf('Environment variable not found: "%s".', $name));
                 }
 
                 $env = $this->container->getParameter("env($name)");
