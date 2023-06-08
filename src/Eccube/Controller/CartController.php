@@ -116,6 +116,12 @@ class CartController extends AbstractController
         // カートが分割された時のセッション情報を削除
         $request->getSession()->remove(OrderHelper::SESSION_CART_DIVIDE_FLAG);
 
+        if (extension_loaded('newrelic')) { // Ensure PHP agent is available
+            // Record custom data about this web transaction
+            newrelic_add_custom_parameter ('total Price', $totalPrice);
+        }
+
+
         return [
             'totalPrice' => $totalPrice,
             'totalQuantity' => $totalQuantity,
